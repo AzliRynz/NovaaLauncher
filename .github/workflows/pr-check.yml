@@ -201,7 +201,7 @@ jobs:
           fi
 
       - name: 💬 Comment APK size on PR
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const { execSync } = require('child_process');
@@ -229,7 +229,7 @@ jobs:
 
     steps:
       - name: 💬 Post PR Summary
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const lint   = '${{ needs.quick-lint.result }}';
