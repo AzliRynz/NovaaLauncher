@@ -111,10 +111,12 @@ public class HomeActivity extends AppCompatActivity implements
         rvDock.setAdapter(dockAdapter);
     }
 
+    @SuppressLint("MissingPermission")
     private void applyWallpaper() {
         try {
             WallpaperManager wm = WallpaperManager.getInstance(this);
             Drawable wallpaper = wm.getDrawable();
+
             if (wallpaper != null) {
                 ivWallpaper.setImageDrawable(wallpaper);
             }
@@ -122,7 +124,6 @@ public class HomeActivity extends AppCompatActivity implements
             ivWallpaper.setBackgroundResource(R.drawable.default_wallpaper);
         }
 
-        // Apply dim overlay from prefs
         float dimAlpha = prefs.getWallpaperDim() / 100f * 0.7f;
         viewDimOverlay.setAlpha(dimAlpha);
     }
