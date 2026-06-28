@@ -114,7 +114,7 @@ jobs:
 
       - name: 📊 Publish Test Report
         uses: dorny/test-reporter@v1
-        if: always()
+        if: always() && hashFiles('app/build/test-results/testDebugUnitTest/*.xml') != ''
         with:
           name: Unit Test Results
           path: app/build/test-results/testDebugUnitTest/*.xml
