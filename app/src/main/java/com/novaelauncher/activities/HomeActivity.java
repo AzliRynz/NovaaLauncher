@@ -355,6 +355,7 @@ public class HomeActivity extends AppCompatActivity implements
         });
     }
 
+    @SuppressLint("MissingSuperCall")
     @Override
     public void onBackPressed() {
         // Back on home: go to page 0
