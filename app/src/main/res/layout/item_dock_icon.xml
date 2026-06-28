@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dock icon — slightly bigger, horizontal layout -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="6dp"
+    android:minWidth="64dp"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/iv_dock_icon"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/app_icon" />
+
+    <TextView
+        android:id="@+id/tv_dock_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="10sp"
+        android:textColor="@color/icon_label_color"
+        android:shadowColor="#AA000000"
+        android:shadowDx="0"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:visibility="gone" />
+
+</LinearLayout>

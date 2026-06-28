@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_change_wallpaper"  android:title="Change Wallpaper" />
+    <item android:id="@+id/menu_add_widget"        android:title="Add Widget" />
+    <item android:id="@+id/menu_launcher_settings" android:title="Launcher Settings" />
+</menu>

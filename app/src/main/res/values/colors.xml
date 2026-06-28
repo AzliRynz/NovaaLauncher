@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== BRAND ACCENT ===== -->
+    <!-- Purple-violet inspired by Infinix XOS / Oppo ColorOS -->
+    <color name="accent_primary">#6C63FF</color>
+    <color name="accent_secondary">#A89CFF</color>
+    <color name="accent_dark">#4B44CC</color>
+
+    <!-- ===== TEXT ===== -->
+    <color name="text_primary">#FF1A1A2E</color>
+    <color name="text_secondary">#99000000</color>
+    <color name="text_hint">#66000000</color>
+    <color name="icon_label_color">#FFFFFFFF</color>
+
+    <!-- ===== DOCK ===== -->
+    <!-- Semi-transparent frosted white — matches Infinix/Oppo dock -->
+    <color name="dock_background">#AAFFFFFF</color>
+
+    <!-- ===== DRAWER ===== -->
+    <!-- Dark translucent — frosted dark drawer like Oppo ColorOS -->
+    <color name="drawer_background">#EE1A1A2E</color>
+    <color name="drawer_text_color">#DDFFFFFF</color>
+    <color name="search_bar_bg">#33FFFFFF</color>
+
+    <!-- ===== SETTINGS ===== -->
+    <color name="settings_background">#FFF5F5F5</color>
+    <color name="settings_card_bg">#FFFFFFFF</color>
+    <color name="settings_header_color">#FF6C63FF</color>
+
+    <!-- ===== SYSTEM ===== -->
+    <color name="colorPrimary">#6C63FF</color>
+    <color name="colorPrimaryDark">#4B44CC</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="statusBarColor">@android:color/transparent</color>
+</resources>

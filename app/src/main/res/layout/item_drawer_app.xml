@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Single app in the drawer grid -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/iv_drawer_icon"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/app_icon" />
+
+    <TextView
+        android:id="@+id/tv_drawer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textColor="@color/drawer_text_color" />
+
+</LinearLayout>

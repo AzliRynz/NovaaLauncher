@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Reusable seekbar row (used by include tags in settings) -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Children resolved at include-time via android:id override -->
+</merge>

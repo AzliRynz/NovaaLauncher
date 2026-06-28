@@ -1,0 +1,17 @@
+    <!-- NOTE: Add these entries inside <application> in AndroidManifest.xml -->
+
+    <!-- Folder popup -->
+    <!--
+    <activity
+        android:name=".activities.FolderActivity"
+        android:exported="false"
+        android:theme="@style/Theme.NovaaLauncher.Translucent"
+        android:windowSoftInputMode="adjustResize" />
+
+    <!-- Icon pack picker -->
+    <!--
+    <activity
+        android:name=".activities.IconPackPickerActivity"
+        android:exported="false"
+        android:theme="@style/Theme.NovaaLauncher" />
+    -->

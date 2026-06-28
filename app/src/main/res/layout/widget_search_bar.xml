@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Oppo/Infinix-style frosted glass search bar for home screen -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#33FFFFFF"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp">
+
+            <!-- Google "G" color dot — minimal branding -->
+            <TextView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:text="G"
+                android:textColor="#4285F4"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/dot_active" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:text="Search…"
+                android:textColor="#AAFFFFFF"
+                android:textSize="14sp" />
+
+            <!-- Mic icon -->
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_search"
+                android:contentDescription="Voice search"
+                android:tint="#AAFFFFFF" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</merge>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/settings_background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_settings"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/settings_background"
+            app:titleTextColor="@color/text_primary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- ===== GRID ===== -->
+            <TextView style="@style/SettingsSectionHeader" android:text="Home Screen Grid" />
+
+            <include layout="@layout/item_settings_seekbar"
+                android:id="@+id/include_columns" />
+            <!-- We reference children by ID directly in Java, not include IDs -->
+
+            <TextView android:id="@+id/tv_columns_label"
+                style="@style/SettingsLabel" android:text="Columns" />
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <SeekBar android:id="@+id/sb_grid_columns"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:max="3" android:progress="1" />
+                <TextView android:id="@+id/tv_columns_val"
+                    style="@style/SettingsValue" android:text="4" />
+            </LinearLayout>
+
+            <TextView android:id="@+id/tv_rows_label"
+                style="@style/SettingsLabel" android:text="Rows" android:layout_marginTop="12dp"/>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <SeekBar android:id="@+id/sb_grid_rows"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:max="3" android:progress="2" />
+                <TextView android:id="@+id/tv_rows_val"
+                    style="@style/SettingsValue" android:text="5" />
+            </LinearLayout>
+
+            <!-- ===== ICONS ===== -->
+            <TextView style="@style/SettingsSectionHeader" android:text="Icons"
+                android:layout_marginTop="24dp"/>
+
+            <TextView style="@style/SettingsLabel" android:text="Icon Size" />
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <SeekBar android:id="@+id/sb_icon_size"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:max="40" android:progress="16"/>
+                <TextView android:id="@+id/tv_icon_size_val"
+                    style="@style/SettingsValue" android:text="56dp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="48dp" android:orientation="horizontal"
+                android:gravity="center_vertical" android:layout_marginTop="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Show icon labels"
+                    android:textColor="@color/text_primary" android:textSize="15sp"/>
+                <Switch android:id="@+id/sw_icon_label"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:checked="true" />
+            </LinearLayout>
+
+            <!-- Icon shape -->
+            <TextView style="@style/SettingsLabel" android:text="Icon Shape"
+                android:layout_marginTop="8dp"/>
+            <RadioGroup android:id="@+id/rg_icon_shape"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/rb_shape_circle" android:text="Circle"
+                    android:layout_weight="1" android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+                <RadioButton android:id="@+id/rb_shape_squircle" android:text="Squircle"
+                    android:layout_weight="1" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:checked="true"/>
+                <RadioButton android:id="@+id/rb_shape_square" android:text="Square"
+                    android:layout_weight="1" android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </RadioGroup>
+
+            <!-- ===== DOCK ===== -->
+            <TextView style="@style/SettingsSectionHeader" android:text="Dock"
+                android:layout_marginTop="24dp"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="48dp" android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Show dock"
+                    android:textColor="@color/text_primary" android:textSize="15sp"/>
+                <Switch android:id="@+id/sw_dock_enabled"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:checked="true"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="48dp" android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Dock background"
+                    android:textColor="@color/text_primary" android:textSize="15sp"/>
+                <Switch android:id="@+id/sw_dock_bg"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:checked="true"/>
+            </LinearLayout>
+
+            <TextView style="@style/SettingsLabel" android:text="Dock items" />
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <SeekBar android:id="@+id/sb_dock_items"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:max="4" android:progress="2"/>
+                <TextView android:id="@+id/tv_dock_items_val"
+                    style="@style/SettingsValue" android:text="5"/>
+            </LinearLayout>
+
+            <!-- ===== WALLPAPER ===== -->
+            <TextView style="@style/SettingsSectionHeader" android:text="Wallpaper"
+                android:layout_marginTop="24dp"/>
+
+            <TextView style="@style/SettingsLabel" android:text="Dim wallpaper" />
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <SeekBar android:id="@+id/sb_wallpaper_dim"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:max="70" android:progress="0"/>
+                <TextView android:id="@+id/tv_dim_val"
+                    style="@style/SettingsValue" android:text="0%"/>
+            </LinearLayout>
+
+            <!-- ===== TRANSITIONS ===== -->
+            <TextView style="@style/SettingsSectionHeader" android:text="Page Transition"
+                android:layout_marginTop="24dp"/>
+            <RadioGroup android:id="@+id/rg_transition"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/rb_transition_scroll" android:text="Scroll"
+                    android:layout_weight="1" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:checked="true"/>
+                <RadioButton android:id="@+id/rb_transition_cube" android:text="Cube"
+                    android:layout_weight="1" android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+                <RadioButton android:id="@+id/rb_transition_fade" android:text="Fade"
+                    android:layout_weight="1" android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+                <RadioButton android:id="@+id/rb_transition_flip" android:text="Flip"
+                    android:layout_weight="1" android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </RadioGroup>
+
+            <!-- ===== GESTURES ===== -->
+            <TextView style="@style/SettingsSectionHeader" android:text="Gestures"
+                android:layout_marginTop="24dp"/>
+
+            <TextView style="@style/SettingsLabel" android:text="Swipe Up"/>
+            <RadioGroup android:id="@+id/rg_swipe_up"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/rb_swipe_up_drawer" android:text="App Drawer"
+                    android:layout_weight="1" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:checked="true"/>
+                <RadioButton android:id="@+id/rb_swipe_up_search" android:text="Search"
+                    android:layout_weight="1" android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </RadioGroup>
+
+            <TextView style="@style/SettingsLabel" android:text="Swipe Down"
+                android:layout_marginTop="8dp"/>
+            <RadioGroup android:id="@+id/rg_swipe_down"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/rb_swipe_down_notif" android:text="Notifications"
+                    android:layout_weight="1" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:checked="true"/>
+                <RadioButton android:id="@+id/rb_swipe_down_search" android:text="Search"
+                    android:layout_weight="1" android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </RadioGroup>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="48dp" android:orientation="horizontal"
+                android:gravity="center_vertical" android:layout_marginTop="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Haptic feedback"
+                    android:textColor="@color/text_primary" android:textSize="15sp"/>
+                <Switch android:id="@+id/sw_haptic"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:checked="true"/>
+            </LinearLayout>
+
+            <!-- ===== OTHER ===== -->
+            <TextView style="@style/SettingsSectionHeader" android:text="Display"
+                android:layout_marginTop="24dp"/>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="48dp" android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Hide status bar"
+                    android:textColor="@color/text_primary" android:textSize="15sp"/>
+                <Switch android:id="@+id/sw_statusbar_hide"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:checked="false"/>
+            </LinearLayout>
+
+            <!-- Bottom padding -->
+            <View android:layout_width="match_parent" android:layout_height="48dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
