@@ -113,7 +113,7 @@ jobs:
         run: ./gradlew testDebugUnitTest --stacktrace
 
       - name: 📊 Publish Test Report
-        uses: dorny/test-reporter@v1
+        uses: dorny/test-reporter@v3
         if: always() && hashFiles('app/build/test-results/testDebugUnitTest/*.xml') != ''
         with:
           name: Unit Test Results
