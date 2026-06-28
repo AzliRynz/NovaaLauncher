@@ -61,7 +61,7 @@
                     android:layout_height="36dp"
                     android:src="@drawable/ic_close"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:tint="#AAFFFFFF"
+                    app:tint="#AAFFFFFF"
                     android:contentDescription="Close folder" />
 
             </LinearLayout>
