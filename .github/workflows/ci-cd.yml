@@ -3,15 +3,11 @@ name: 🚀 Novaa Launcher CI/CD
 on:
   push:
     branches:
-      - main
-      - develop
+      - master
       - 'release/**'
     tags:
       - 'v*.*.*'
   pull_request:
-    branches:
-      - main
-      - develop
   workflow_dispatch:
     inputs:
       build_type:
