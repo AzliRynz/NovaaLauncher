@@ -1,6 +1,7 @@
 package com.novaelauncher.utils;
 
 import android.app.ActivityOptions;
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -78,6 +79,7 @@ public class AppLauncher {
     @SuppressWarnings({"unchecked", "rawtypes"})
     public static void expandNotificationShade(Context context) {
         try {
+            @SuppressLint("WrongConstant")
             Object service = context.getSystemService("statusbar");
             Class cls = Class.forName("android.app.StatusBarManager");
             cls.getMethod("expandNotificationsPanel").invoke(service);
