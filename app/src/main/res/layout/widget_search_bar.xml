@@ -46,7 +46,7 @@
                 android:layout_height="20dp"
                 android:src="@drawable/ic_search"
                 android:contentDescription="Voice search"
-                android:tint="#AAFFFFFF" />
+                app:tint="#AAFFFFFF" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
