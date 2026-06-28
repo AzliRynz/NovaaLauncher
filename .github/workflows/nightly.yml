@@ -60,14 +60,14 @@ jobs:
           echo "NIGHTLY_APK=$DEST" >> $GITHUB_ENV
 
       - name: 📤 Upload Nightly APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: nightly-${{ github.run_number }}
           path: app/build/outputs/apk/debug/NovaaLauncher-nightly-*.apk
           retention-days: 7   # auto-delete after 1 week
 
       - name: 📊 Upload Test Results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: nightly-test-results-${{ github.run_number }}

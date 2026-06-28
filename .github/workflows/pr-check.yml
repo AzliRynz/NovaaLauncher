@@ -105,7 +105,7 @@ jobs:
       - name: 🔍 Lint
         run: ./gradlew lintDebug --stacktrace
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: pr-lint-report
@@ -145,7 +145,7 @@ jobs:
       - name: 🧪 Unit Tests
         run: ./gradlew testDebugUnitTest --stacktrace
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: pr-test-results
